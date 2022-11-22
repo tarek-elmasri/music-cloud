@@ -4,6 +4,7 @@ const initialState = {
   currentIndex: 0,
   isActive: false,
   activeSong: {},
+  isPlaying: false
 };
 
 const playerSlice = createSlice({
@@ -15,9 +16,13 @@ const playerSlice = createSlice({
       state.currentIndex = action.payload.i;
       state.isActive = true;
     },
+
+    playPause: (state, action) => {
+      state.isPlaying = action.payload
+    }
   },
 });
 
-export const { setActiveSong } = playerSlice.actions;
+export const { setActiveSong, playPause } = playerSlice.actions;
 
 export default playerSlice.reducer;

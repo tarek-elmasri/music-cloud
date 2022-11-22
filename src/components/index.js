@@ -4,6 +4,7 @@ import TopPlay from './TopPlay'
 import Error from './Error'
 import Loader from './Loader'
 import SongCard from './SongCard'
+import PlayPause from './PlayPause'
 
 export {
   Sidebar,
@@ -11,5 +12,6 @@ export {
   TopPlay,
   Error,
   Loader,
-  SongCard
+  SongCard,
+  PlayPause
 };
