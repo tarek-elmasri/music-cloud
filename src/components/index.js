@@ -5,6 +5,7 @@ import Error from './Error'
 import Loader from './Loader'
 import SongCard from './SongCard'
 import PlayPause from './PlayPause'
+import MusicPlayer from './MusicPlayer'
 
 export {
   Sidebar,
@@ -13,5 +14,6 @@ export {
   Error,
   Loader,
   SongCard,
-  PlayPause
+  PlayPause,
+  MusicPlayer
 };
