@@ -4,7 +4,8 @@ const initialState = {
   currentIndex: 0,
   isActive: false,
   activeSong: {},
-  isPlaying: false
+  isPlaying: false,
+  currentSongs: []
 };
 
 const playerSlice = createSlice({
@@ -15,6 +16,14 @@ const playerSlice = createSlice({
       state.activeSong = action.payload.song;
       state.currentIndex = action.payload.i;
       state.isActive = true;
+
+      if (action.payload?.data?.tracks?.hits) {
+        state.currentSongs = action.payload.data.tracks.hits
+      } else if (action.payload?.data?.properties) {
+        state.currentSongs = action.payload?.data?.tracks
+      } else {
+        state.currentSongs = action.payload.data
+      }
     },
 
     playPause: (state, action) => {
