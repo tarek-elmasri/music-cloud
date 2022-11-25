@@ -28,10 +28,32 @@ const playerSlice = createSlice({
 
     playPause: (state, action) => {
       state.isPlaying = action.payload
+    },
+
+    nextSong: (state, action) => {
+      if (state.currentSongs[action.payload]?.track) {
+        state.activeSong = state.currentSongs[action.payload]?.track
+      } else {
+        state.activeSong = state.currentSongs[action.payload]
+      }
+
+      state.currentIndex = action.payload
+      state.isActive = true
+    },
+
+    prevSong: (state, action) => {
+      if (state.currentSongs[action.payload]?.track) {
+        state.activeSong = state.currentSongs[action.payload]?.track
+      } else {
+        state.activeSong = state.currentSongs[action.payload]
+      }
+
+      state.currentIndex = action.payload
+      state.isActive = true
     }
   },
 });
 
-export const { setActiveSong, playPause } = playerSlice.actions;
+export const { setActiveSong, playPause, nextSong, prevSong } = playerSlice.actions;
 
 export default playerSlice.reducer;
