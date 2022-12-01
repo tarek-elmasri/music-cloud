@@ -1,7 +1,13 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { MusicPlayer, SearchBar, Sidebar, TopPlay } from "./components";
-import { Discover, SongDetails, ArtistDetails, AroundYou } from "./pages";
+import {
+  Discover,
+  SongDetails,
+  ArtistDetails,
+  AroundYou,
+  TopCharts,
+} from "./pages";
 
 import { useSelector } from "react-redux";
 
@@ -22,6 +28,7 @@ const App = () => {
               <Route path="/songs/:songId" element={<SongDetails />} />
               <Route path="/artists/:artistId" element={<ArtistDetails />} />
               <Route path="/around-you" element={<AroundYou />} />
+              <Route path="/top-charts" element={<TopCharts />} />
             </Routes>
           </div>
           <div className="xl:sticky relative top-0 h-fit">
