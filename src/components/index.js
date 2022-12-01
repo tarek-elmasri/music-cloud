@@ -23,5 +23,5 @@ export {
   DetailsHeader,
   RelatedSongs,
   SongBar,
-  ArtistCard
+  ArtistCard,
 };
