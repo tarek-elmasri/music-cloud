@@ -9,6 +9,7 @@ import MusicPlayer from './MusicPlayer'
 import DetailsHeader from './DetailsHeader'
 import RelatedSongs from './RelatedSongs'
 import SongBar from './SongBar'
+import ArtistCard from './ArtistCard'
 
 export {
   Sidebar,
@@ -21,5 +22,6 @@ export {
   MusicPlayer,
   DetailsHeader,
   RelatedSongs,
-  SongBar
+  SongBar,
+  ArtistCard
 };

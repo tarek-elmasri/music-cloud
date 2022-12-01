@@ -7,6 +7,7 @@ import {
   ArtistDetails,
   AroundYou,
   TopCharts,
+  TopArtists,
 } from "./pages";
 
 import { useSelector } from "react-redux";
@@ -29,6 +30,7 @@ const App = () => {
               <Route path="/artists/:artistId" element={<ArtistDetails />} />
               <Route path="/around-you" element={<AroundYou />} />
               <Route path="/top-charts" element={<TopCharts />} />
+              <Route path="/top-artists" element={<TopArtists />} />
             </Routes>
           </div>
           <div className="xl:sticky relative top-0 h-fit">
