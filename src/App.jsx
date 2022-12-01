@@ -4,6 +4,8 @@ import { MusicPlayer, SearchBar, Sidebar, TopPlay } from "./components";
 import { Discover } from "./pages";
 
 import { useSelector } from "react-redux";
+import SongDetails from "./pages/SongDetails";
+import ArtistDetails from "./pages/ArtistDetails";
 
 const App = () => {
   const { activeSong } = useSelector((state) => state.player);
@@ -19,6 +21,8 @@ const App = () => {
           <div className="flex-1 h-fit pb-40">
             <Routes>
               <Route path="/" element={<Discover />} />
+              <Route path="/songs/:songId" element={<SongDetails />} />
+              <Route path="/artists/:artistId" element={<ArtistDetails />} />
             </Routes>
           </div>
           <div className="xl:sticky relative top-0 h-fit">

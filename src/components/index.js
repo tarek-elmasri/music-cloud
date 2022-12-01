@@ -6,6 +6,9 @@ import Loader from './Loader'
 import SongCard from './SongCard'
 import PlayPause from './PlayPause'
 import MusicPlayer from './MusicPlayer'
+import DetailsHeader from './DetailsHeader'
+import RelatedSongs from './RelatedSongs'
+import SongBar from './SongBar'
 
 export {
   Sidebar,
@@ -15,5 +18,8 @@ export {
   Loader,
   SongCard,
   PlayPause,
-  MusicPlayer
+  MusicPlayer,
+  DetailsHeader,
+  RelatedSongs,
+  SongBar
 };
